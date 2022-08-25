@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import Form from './components/Form';
 
 class App extends React.Component {
