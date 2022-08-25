@@ -1,11 +1,11 @@
-import React, { Component} from "react";
+import React, { Component } from 'react';
 
 class Form extends Component {
   render() {
     return (
       <form>
 
-        <input type='text' data-testid="name-input" />
+        <input type="text" data-testid="name-input" />
 
         <textarea data-testid="description-input" />
 
@@ -26,9 +26,9 @@ class Form extends Component {
         <checkbox data-testid="trunfo-input" />
 
         <button type="submit" data-testid="save-button"> Salvar </button>
-        
+
       </form>
-    )
+    );
   }
 }
 
