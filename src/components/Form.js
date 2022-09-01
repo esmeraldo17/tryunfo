@@ -20,73 +20,108 @@ class Form extends Component {
     return (
       <form>
 
-        <input
-          type="text"
-          data-testid="name-input"
-          value={ cardName }
-          onChange={ onInputChange }
-        />
+        <label htmlFor="input-name">
+          <h3>Nome</h3>
+          <input
+            type="text"
+            data-testid="name-input"
+            id="input-name"
+            value={ cardName }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <textarea
-          data-testid="description-input"
-          value={ cardDescription }
-          onChange={ onInputChange }
-        />
+        <label htmlFor="description-input">
+          <h3>Descrição</h3>
+          <textarea
+            data-testid="description-input"
+            id="description-input"
+            value={ cardDescription }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <input
-          type="number"
-          data-testid="attr1-input"
-          value={ cardAttr1 }
-          onChange={ onInputChange }
-        />
+        <label htmlFor="input-attr1">
+          <h3>Attr01</h3>
+          <input
+            type="number"
+            data-testid="attr1-input"
+            id="input-attr1"
+            value={ cardAttr1 }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <input
-          type="number"
-          data-testid="attr2-input"
-          value={ cardAttr2 }
-          onChange={ onInputChange }
-        />
+        <label htmlFor="input-attr2">
+          <h3>Attr02</h3>
+          <input
+            type="number"
+            data-testid="attr2-input"
+            id="input-attr2"
+            value={ cardAttr2 }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <input
-          type="number"
-          data-testid="attr3-input"
-          value={ cardAttr3 }
-          onChange={ onInputChange }
-        />
+        <label htmlFor="input-attr3">
+          <h3>Attr03</h3>
+          <input
+            type="number"
+            data-testid="attr3-input"
+            id="input-attr3"
+            value={ cardAttr3 }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <input
-          type="text"
-          data-testid="image-input"
-          value={ cardImage }
-          onChange={ onInputChange }
-        />
+        <label htmlFor="input-image">
+          <h3>Imagem</h3>
+          <input
+            type="text"
+            data-testid="image-input"
+            id="input-image"
+            value={ cardImage }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <select
-          data-testid="rare-input"
-          value={ cardRare }
-          onChange={ onInputChange }
-        >
+        <label htmlFor="input-rare">
+          <h3>Raridade</h3>
+          <select
+            data-testid="rare-input"
+            id="input-rare"
+            value={ cardRare }
+            onChange={ onInputChange }
+          >
+            <option value="normal">normal</option>
+            <option value="raro">raro</option>
+            <option value="muito raro">muito raro</option>
+          </select>
+        </label>
 
-          <option value="normal">normal</option>
-          <option value="raro">raro</option>
-          <option value="muito raro">muito raro</option>
+        <label htmlFor="input-trunfo">
+          <br />
+          <input
+            type="checkbox"
+            data-testid="trunfo-input"
+            id="input-trunfo"
+            checked={ cardTrunfo }
+            onChange={ onInputChange }
+          />
+          Super Trunfo
+        </label>
 
-        </select>
-
-        <input
-          type="checkbox"
-          data-testid="trunfo-input"
-          checked={ cardTrunfo }
-          onChange={ onInputChange }
-        />
-        <button
-          type="submit"
-          data-testid="save-button"
-          disabled={ isSaveButtonDisabled }
-          onClick={ onSaveButtonClick }
-        >
-          Salvar
-        </button>
+        <label htmlFor="button-save">
+          <br />
+          <input
+            type="submit"
+            value="Salvar"
+            data-testid="save-button"
+            id="button-save"
+            disabled={ isSaveButtonDisabled }
+            onClick={ onSaveButtonClick }
+          />
+        </label>
 
       </form>
     );
