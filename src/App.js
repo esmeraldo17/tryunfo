@@ -102,6 +102,20 @@ class App extends React.Component {
     });
   };
 
+  handleDeleteCard = ({ target }) => {
+    const { cardList } = this.state;
+
+    const newCard = cardList.filter(({ cardName }) => cardName
+    !== target.name);
+
+    this.setState({
+      cardList: newCard,
+    }, () => {
+      target.parentNode.remove();
+      this.handleTrunfo();
+    });
+  };
+
   render() {
     const {
       cardName,
@@ -157,6 +171,14 @@ class App extends React.Component {
               cardRare={ item.cardRare }
               cardTrunfo={ item.cardTrunfo }
             />
+            <button
+              type="submit"
+              name={ item.cardName }
+              data-testid="delete-button"
+              onClick={ this.handleDeleteCard }
+            >
+              Excluir
+            </button>
           </li>))}
 
       </div>
